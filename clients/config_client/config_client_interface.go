@@ -1,8 +1,8 @@
 package config_client
 
 import (
-	"github.com/nacos-group/nacos-sdk-go/model"
-	"github.com/nacos-group/nacos-sdk-go/vo"
+	"github.com/happyboy310/nacos-sdk-go/model"
+	"github.com/happyboy310/nacos-sdk-go/vo"
 )
 
 /**

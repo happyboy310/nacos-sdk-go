@@ -2,9 +2,9 @@ package naming_client
 
 import (
 	"encoding/json"
-	"github.com/nacos-group/nacos-sdk-go/clients/cache"
-	"github.com/nacos-group/nacos-sdk-go/model"
-	"github.com/nacos-group/nacos-sdk-go/utils"
+	"github.com/happyboy310/nacos-sdk-go/clients/cache"
+	"github.com/happyboy310/nacos-sdk-go/model"
+	"github.com/happyboy310/nacos-sdk-go/utils"
 	"log"
 	"reflect"
 	"time"
@@ -118,6 +118,7 @@ func (hr *HostReactor) GetAllServiceInfo(nameSpace string, groupName string, clu
 
 func (hr *HostReactor) updateServiceNow(serviceName string, clusters string) {
 	result, err := hr.serviceProxy.QueryList(serviceName, clusters, hr.pushReceiver.port, false)
+	log.Printf("[ERROR]:query list update!servieName:%s cluster:%s  err:%s port:%d\n", serviceName, clusters, hr.pushReceiver.port)
 	if err != nil {
 		log.Printf("[ERROR]:query list return error!servieName:%s cluster:%s  err:%s \n", serviceName, clusters, err.Error())
 		return

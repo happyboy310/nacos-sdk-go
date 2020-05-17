@@ -1,4 +1,4 @@
-module github.com/nacos-group/nacos-sdk-go
+module github.com/happyboy310/nacos-sdk-go
 
 go 1.12
 
