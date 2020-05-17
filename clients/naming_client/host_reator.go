@@ -38,6 +38,7 @@ func NewHostReactor(serviceProxy NamingProxy, cacheDir string, updateThreadNum i
 	}
 	pr := NewPushRecevier(&hr)
 	hr.pushReceiver = *pr
+	log.Printf("[INFO]: push  port:%d, port:%d\n", serviceName, clusters, hr.pushReceiver.port, pr.port)
 	if !notLoadCacheAtStart {
 		hr.loadCacheFromDisk()
 	}

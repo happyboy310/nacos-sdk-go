@@ -15,8 +15,8 @@ func main() {
 	client, err := clients.CreateNamingClient(map[string]interface{}{
 		"serverConfigs": []constant.ServerConfig{
 			{
-				IpAddr: "console.nacos.io",
-				Port:   80,
+				IpAddr: "127.0.0.1",
+				Port:   8848,
 			},
 		},
 		"clientConfig": constant.ClientConfig{
