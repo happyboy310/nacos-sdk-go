@@ -118,7 +118,7 @@ func (hr *HostReactor) GetAllServiceInfo(nameSpace string, groupName string, clu
 
 func (hr *HostReactor) updateServiceNow(serviceName string, clusters string) {
 	result, err := hr.serviceProxy.QueryList(serviceName, clusters, hr.pushReceiver.port, false)
-	log.Printf("[ERROR]:query list update!servieName:%s cluster:%s  err:%s port:%d\n", serviceName, clusters, hr.pushReceiver.port)
+	log.Printf("[INFO]:query list update!servieName:%s cluster:%s port:%d\n", serviceName, clusters, hr.pushReceiver.port)
 	if err != nil {
 		log.Printf("[ERROR]:query list return error!servieName:%s cluster:%s  err:%s \n", serviceName, clusters, err.Error())
 		return
