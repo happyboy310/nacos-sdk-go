@@ -72,6 +72,7 @@ func (proxy *NamingProxy) SendBeat(info model.BeatInfo) (int64, error) {
 	if err != nil {
 		return 0, err
 	}
+	log.Printf("[INFO] namespaceId:<%s> sending beat to server: result : <%s> \n", result)
 	if result != "" {
 		interVal, err := jsonparser.GetInt([]byte(result), "clientBeatInterval")
 		if err != nil {
